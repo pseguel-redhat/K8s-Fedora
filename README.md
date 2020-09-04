@@ -1,4 +1,4 @@
-#Installing K8s in Fedora
+# Installing K8s in Fedora
 
 This is a step by step guide for a local (lab) vanilla K8s on Fedora Server.
 
