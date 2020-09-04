@@ -411,11 +411,18 @@ pod/apache-centos7 created
 
 ```
 
+
 ### Set SELinux contexts
 
 #### for kubernetes files
+```
 chcon -R -t svirt_sandbox_file_t /etc/kubernetes/
+```
+
 
 #### for etcd files
+
+```
 chcon -R -t svirt_sandbox_file_t /var/lib/etcd
+```
 
