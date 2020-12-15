@@ -126,9 +126,10 @@ RestartSec=10
 ### Install!
 
 If steps fail from here, run `kubeadm reset` and start over from this step.
+Note: network was explicity defined, otherwise Flannel fails.
 
 ```
-[root@fedora-laptop ~]# kubeadm init --kubernetes-version=stable 
+[root@fedora-laptop ~]# kubeadm init --kubernetes-version=stable --pod-network-cidr=10.244.0.0/16
 I0903 22:25:00.565644  128039 version.go:248] remote version is much newer: v1.19.0; falling back to: stable-1.15
 [init] Using Kubernetes version: v1.15.12
 [preflight] Running pre-flight checks
