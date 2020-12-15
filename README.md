@@ -425,3 +425,9 @@ chcon -R -t svirt_sandbox_file_t /etc/kubernetes/
 chcon -R -t svirt_sandbox_file_t /var/lib/etcd
 ```
 
+## BONUS Track
+
+#### Configure Red Hat Registry
+```
+kubectl create secret docker-registry creds-redhat-registry --docker-server=registry.redhat.io  --docker-username='<USERNAME>' --docker-password='<PASSWORD>'
+
