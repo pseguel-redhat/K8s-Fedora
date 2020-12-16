@@ -327,7 +327,8 @@ fedora-laptop   Ready    master   8m1s   v1.15.8-beta.0
     "key": "node-role.kubernetes.io/master"
   }
 ]
-[pseguel@fedora-laptop ~]$ kubectl taint nodes fedora-laptop node-role.kubernetes.io/master:NoSchedule-
+[pseguel@fedora-laptop ~]$ kubectl taint nodes --all node-role.kubernetes.io/master-
+node/fedora-laptop untainted
 [pseguel@fedora-laptop ~]$ kubectl get nodes -o json | jq .items[].spec.taints
 null
 ```
