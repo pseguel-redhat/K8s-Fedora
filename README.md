@@ -127,6 +127,7 @@ RestartSec=10
 
 If steps fail from here, run `kubeadm reset` and start over from this step.
 Note: network was explicity defined, otherwise Flannel fails.
+Note 2: remember "SELinux as permissive" if rebooted
 
 ```
 [root@fedora-laptop ~]# kubeadm init --kubernetes-version=stable --pod-network-cidr=10.244.0.0/16
